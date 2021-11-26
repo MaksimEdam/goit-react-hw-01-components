@@ -1,9 +1,10 @@
-
-function Section({title, children}) {
-    return (
-        <div>{title && <h2 className="title">{title}</h2>}{children}
-        </div>
-    )
+function Section({ title, children }) {
+  return (
+    <section className="test2 statistics">
+      {title && <h2 className="title">{title}</h2>}
+      {children}
+    </section>
+  );
 }
 
-export default Section
+export default Section;
