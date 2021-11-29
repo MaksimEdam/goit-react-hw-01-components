@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 function Friend({ avatar, name, isOnline }) {
   return (
     <li className="item1">
@@ -16,5 +17,9 @@ function Friend({ avatar, name, isOnline }) {
     </li>
   );
 }
-
+Friend.propTypes = {
+  isOnline: PropTypes.bool.isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
 export default Friend;

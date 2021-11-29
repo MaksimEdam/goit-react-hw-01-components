@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 function Statistic({ label, percentage }) {
   function randomColor() {
     var allowed = 'ABCDEF0123456789',
@@ -15,5 +16,8 @@ function Statistic({ label, percentage }) {
     </li>
   );
 }
-
+Statistic.propTypes = {
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
+};
 export default Statistic;
