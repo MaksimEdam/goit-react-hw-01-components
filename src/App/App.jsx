@@ -17,7 +17,7 @@ function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics items={data} />
+      <Statistics title="Upload stats" stats={data} />
       <FriendList items={friends} />
       <TransactionHistory items={transactions} />
     </div>

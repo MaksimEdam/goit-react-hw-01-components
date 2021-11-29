@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
 
-function Statistics({ title = 'Upload stats', items }) {
+function Statistics({ title, stats }) {
   function randomColor() {
     let allowed = 'ABCDEF0123456789',
       S = '#';
@@ -14,14 +14,14 @@ function Statistics({ title = 'Upload stats', items }) {
     <section className={s.statistics}>
       <h2 className={s.title}>{title}</h2>
       <ul className={s.statList}>
-        {items.map(item => (
+        {stats.map(stat => (
           <li
             className={s.item}
             style={{ backgroundColor: randomColor() }}
-            key={item.id}
+            key={stat.id}
           >
-            <span className={s.label}>{item.label}</span>
-            <span className={s.percentage}>{item.percentage + '%'}</span>
+            <span className={s.label}>{stat.label}</span>
+            <span className={s.percentage}>{stat.percentage + '%'}</span>
           </li>
         ))}
       </ul>
